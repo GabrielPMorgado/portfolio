@@ -1,0 +1,161 @@
+/* Import da fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Cores principais - Tema Escuro Profissional */
+  --primary-color: #0ea5e9; /* Azul vibrante */
+  --primary-dark: #0284c7; /* Azul mais escuro */
+  --primary-light: #38bdf8; /* Azul claro */
+  --secondary-color: #1e40af; /* Azul profundo */
+  --accent-color: #3b82f6; /* Azul accent */
+  --accent-light: #60a5fa; /* Azul accent claro */
+  
+  /* Cores neutras - Tema Escuro */
+  --background-primary: #0f172a; /* Quase preto azulado */
+  --background-secondary: #1e293b; /* Cinza azulado escuro */
+  --background-tertiary: #334155; /* Cinza azulado médio */
+  --surface: #1e293b; /* Superfície de cards */
+  --surface-hover: #334155; /* Superfície hover */
+  
+  /* Texto */
+  --text-primary: #f8fafc; /* Branco suave */
+  --text-secondary: #cbd5e1; /* Cinza claro */
+  --text-muted: #94a3b8; /* Cinza médio */
+  --text-accent: #60a5fa; /* Azul para destaques */
+  
+  /* Bordas e linhas */
+  --border-primary: #334155; /* Borda principal */
+  --border-secondary: #475569; /* Borda secundária */
+  --border-accent: #0ea5e9; /* Borda de destaque */
+  
+  /* Gradientes - Tema Escuro */
+  --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --gradient-secondary: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  --gradient-accent: linear-gradient(45deg, #0ea5e9 0%, #3b82f6 100%);
+  --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  
+  /* Sombras - Adaptadas para tema escuro */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 15px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.3);
+  
+  /* Raios de borda */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 15px;
+  --radius-xl: 20px;
+  
+  /* Espaçamentos */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Tipografia */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Botões */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inputs */
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Foco para acessibilidade */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Scrollbar customizada - Tema Escuro */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Seleção de texto - Tema Escuro */
+::selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: var(--text-primary);
+}

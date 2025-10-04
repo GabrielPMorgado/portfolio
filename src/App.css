@@ -1,0 +1,217 @@
+/* Tema Escuro Global - App.css */
+.App {
+  background: var(--background-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Sobrescrita global para cores de texto */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+p {
+  color: var(--text-secondary) !important;
+}
+
+/* Sobrescrita para backgrounds de seções */
+.about,
+.projects,
+.contact {
+  background: var(--background-secondary) !important;
+}
+
+.experience {
+  background: var(--background-primary) !important;
+}
+
+/* Sobrescrita para cards */
+.achievement-card,
+.skill-item,
+.project-card,
+.featured-card,
+.experience-card,
+.contact-form-wrapper {
+  background: var(--surface) !important;
+  border: 1px solid var(--border-primary) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.achievement-card:hover,
+.skill-item:hover,
+.project-card:hover,
+.featured-card:hover,
+.experience-card:hover {
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--border-accent) !important;
+}
+
+/* Sobrescrita para elementos interativos */
+.tech-tag {
+  background: rgba(14, 165, 233, 0.1) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(14, 165, 233, 0.2) !important;
+}
+
+.filter-btn {
+  background: var(--surface) !important;
+  border: 2px solid var(--border-primary) !important;
+  color: var(--text-secondary) !important;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.filter-btn.active {
+  background: var(--gradient-secondary) !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+/* Sobrescrita para formulários */
+.form-group input,
+.form-group textarea {
+  background: var(--surface) !important;
+  border: 2px solid var(--border-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1) !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Footer específico */
+.footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: var(--text-primary) !important;
+}
+
+.social-link {
+  background: rgba(14, 165, 233, 0.1) !important;
+  border: 1px solid rgba(14, 165, 233, 0.2) !important;
+}
+
+.social-link:hover {
+  background: rgba(14, 165, 233, 0.2) !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a3d93 100%);
+}
+
+/* Animações globais */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utilitários */
+.section-padding {
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsividade global */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Seleção de texto */
+::selection {
+  background: rgba(102, 126, 234, 0.2);
+  color: #2c3e50;
+}
+
+::-moz-selection {
+  background: rgba(102, 126, 234, 0.2);
+  color: #2c3e50;
+}
+
+/* Foco para acessibilidade */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Transições suaves */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
