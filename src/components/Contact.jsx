@@ -23,11 +23,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simular envio do formulário
+    // Integração com Formspree
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      // SUBSTITUA 'YOUR_FORM_ID' pelo seu Form ID do Formspree
+      // Exemplo: https://formspree.io/f/xvgpbqyw
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
     } catch {
       setSubmitStatus('error');
     } finally {
