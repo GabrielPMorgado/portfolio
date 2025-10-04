@@ -85,46 +85,17 @@ const Contact = () => {
       <div className="contact-container">
         <div className="section-header">
           <h2>Entre em Contato</h2>
-          <p>Vamos conversar sobre oportunidades e projetos interessantes!</p>
+          <p>Envie uma mensagem e entrarei em contato o mais breve possível!</p>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
-            <h3>Informações de Contato</h3>
-            <p className="contact-description">
-              Estou sempre aberto a discutir novas oportunidades, projetos 
-              interessantes ou apenas conversar sobre tecnologia. Não hesite 
-              em entrar em contato!
-            </p>
-
-            <div className="contact-methods">
-              {contactInfo.map((info, index) => (
-                <a key={index} href={info.link} className="contact-method">
-                  <div className="contact-icon">{info.icon}</div>
-                  <div className="contact-details">
-                    <h4>{info.title}</h4>
-                    <p>{info.value}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-
-            <div className="availability">
-              <h4>Disponibilidade</h4>
-              <p>
-                Atualmente buscando oportunidades de estágio e projetos 
-                freelance. Disponível para início imediato.
-              </p>
-              <div className="status-indicator">
-                <span className="status-dot"></span>
-                <span>Disponível para novos projetos</span>
-              </div>
-            </div>
-          </div>
-
+        <div className="contact-content-single">
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
               <h3>Envie uma Mensagem</h3>
+              <p className="form-description">
+                Preencha o formulário abaixo com sua mensagem. Responderei em breve 
+                através do email ou meio de contato de sua preferência.
+              </p>
               
               <div className="form-row">
                 <div className="form-group">
