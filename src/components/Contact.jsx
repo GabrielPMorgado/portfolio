@@ -25,9 +25,8 @@ const Contact = () => {
     
     // Integração com Formspree
     try {
-      // SUBSTITUA 'YOUR_FORM_ID' pelo seu Form ID do Formspree
-      // Exemplo: https://formspree.io/f/xvgpbqyw
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      // Form ID do Formspree configurado
+      const response = await fetch('https://formspree.io/f/xpwyrvao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
