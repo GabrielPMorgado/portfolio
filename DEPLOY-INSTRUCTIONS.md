@@ -23,7 +23,7 @@ git add .
 git commit -m "feat: adicionar portfólio profissional completo"
 
 # Conectar com o repositório do GitHub (substitua SEU-USUARIO pelo seu username)
-git remote add origin https://github.com/SEU-USUARIO/portfolio.git
+git remote add origin https://github.com/GabrielPMorgado/portfolio.git
 
 # Fazer push para o GitHub
 git push -u origin main
